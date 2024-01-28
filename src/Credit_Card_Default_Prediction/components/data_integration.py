@@ -47,6 +47,11 @@ class DataIngestion:
 
             logging.info('Data Ingestion work is completed')
 
+            return (
+                self.ingestion_config.train_data,
+                self.ingestion_config.test_data
+            )
+
 
 
 
