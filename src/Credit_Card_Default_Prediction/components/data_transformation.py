@@ -22,6 +22,7 @@ from sklearn.compose import ColumnTransformer
 @dataclass
 class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join('artifacts','preprocessor.pkl')
+    output_obj_file_path = os.path.join('artifacts','output.pkl')
 
 class DataTransformation:
     def __init__(self):
@@ -64,9 +65,12 @@ class DataTransformation:
 
             save_object(
                         file_path=self.data_transformation_config.preprocessor_obj_file_path,
-                        obj={'preprocessor': preprocessor_obj, 'output': output}
+                        obj=preprocessor_obj
                         )
-
+            save_object(
+                        file_path=self.data_transformation_config.output_obj_file_path,
+                        obj=output
+                        )
             
             logging.info("Preproccessing picklefile saved")
             return(
