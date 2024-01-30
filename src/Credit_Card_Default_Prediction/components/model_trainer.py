@@ -22,22 +22,22 @@ class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
     
-    def initate_model_training(self,train_array,test_array):
+    def initate_model_training(self,X_train,Y_train,X_test,Y_test):
         try:
             logging.info('Splitting Dependent and Independent variables from train and test data')
             X_train, y_train, X_test, y_test = (
-                train_array[:,:-1],
-                train_array[:,-1],
-                test_array[:,:-1],
-                test_array[:,-1]
+                 X_train,
+                Y_train,
+                X_test,
+                Y_test,
             )
 
             models={
             'XGBClassifier':XGBClassifier(colsample_bytree = 0.8,gamma= 5,max_depth= 4,min_child_weight= 5,subsample= 1.0,n_jobs = -1),
             'RandomForestClassifier':RandomForestClassifier(n_estimators=300,min_samples_leaf=15,max_depth= None,criterion= 'gini',n_jobs=-1)
             }
----------------------------------------------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------------------------------------------            
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------------------------------            
             model_report:dict=evaluate_model(X_train,y_train,X_test,y_test,models)
             print(model_report)
             print('\n====================================================================================\n')

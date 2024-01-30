@@ -28,7 +28,7 @@ class DataTransformation:
         self.data_transformation_config = DataTransformationConfig()
 
     
-    def initiate_data_transformation(self,train_data,test_data):
+    def initiate_data_transformation(self,train_path,test_path):
         try:
             train_df = pd.read_csv(train_path)
             test_df = pd.read_csv(test_path)
@@ -53,10 +53,14 @@ class DataTransformation:
             output = LabelEncoder()
             target_feature_train_df =output.fit_transform(target_feature_train_df)
             target_feature_test_df = output.transform(target_feature_test_df)
-            looging.info('target column also get transformed')
+            logging.info('target column also get transformed')
+            X_train = input_feature_train_arr
+            Y_train = target_feature_train_df
+            X_test = input_feature_test_arr
+            Y_test = target_feature_test_df
             
-            train_arr = np.c_[input_feature_train_arr,np.array(target_feature_train_df)]
-            test_arr = np.c_[input_feature_test_arr,np.array(target_feature_test_df)]
+            # train_arr = np.c_[input_feature_train_arr,np.array(target_feature_train_df)]
+            # test_arr = np.c_[input_feature_test_arr,np.array(target_feature_test_df)]
 
             save_object(
                         file_path=self.data_transformation_config.preprocessor_obj_file_path,
@@ -66,8 +70,10 @@ class DataTransformation:
             
             logging.info("Preproccessing picklefile saved")
             return(
-                train_arr,
-                test_arr
+                X_train,
+                Y_train,
+                X_test,
+                Y_test
             )
 
         except Exception as e:
