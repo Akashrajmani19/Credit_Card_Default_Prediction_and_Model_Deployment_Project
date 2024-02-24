@@ -1,0 +1,9 @@
+body {
+    background-image: url('templates\maxresdefault.jpg');
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+}
+
+h1 {
+    color: white; /* Change text color to white for better visibility */
+}
