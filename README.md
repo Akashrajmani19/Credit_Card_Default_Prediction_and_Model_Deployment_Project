@@ -132,3 +132,21 @@ In a world where financial stability is paramount, the fusion of Exploratory Dat
    - Access the web service at http://localhost:8080/ to interact with the prediction model.
 
 
+# Project Documentation
+
+Welcome to the documentation section of the Credit Card Default Prediction project. Here, you'll find links to the high-level design, low-level design, complete project report, architecture document, and wireframe document.
+
+## High-Level Design (HLD)
+- [HLD Document](https://drive.google.com/file/d/1PqLsDyko4ci6dv3FN5yW2fZAwOqF8z86/view?usp=sharing)
+
+## Low-Level Design (LLD)
+- [LLD Document](https://drive.google.com/file/d/1l3rBSrtbbAatoDmjUtxg3lpOjQJ1x395/view?usp=drive_link)
+
+## Complete Project Report
+- [Project Report](https://drive.google.com/file/d/1T4cVKLAl2M5lMOeWgW-dg9gDPpqZPo9b/view?usp=drive_link)
+
+## Architecture Document
+- [Architecture Document](https://drive.google.com/file/d/19K5ECKDPQKO1ED7kwtAsQjLMsk1XQm9s/view?usp=drive_link)
+
+## Wireframe Document
+- [Wireframe Document](https://drive.google.com/file/d/1zkOlZ3vJ1KdNwaYB8CcD4smpWB4ihQlN/view?usp=drive_link)
