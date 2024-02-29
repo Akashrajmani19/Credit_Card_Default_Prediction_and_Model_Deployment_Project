@@ -1,5 +1,5 @@
 body {
-    background-image: url('templates\maxresdefault.jpg');
+    background-image: url('maxresdefault.jpg');
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background image */
 }
