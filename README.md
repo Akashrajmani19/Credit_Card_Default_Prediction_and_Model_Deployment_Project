@@ -61,3 +61,74 @@ Upon selecting the most potent machine learning model, we transition from experi
 ## Conclusion: Navigating the Financial Landscape
 
 In a world where financial stability is paramount, the fusion of Exploratory Data Analysis, Feature Engineering, Machine Learning, and Model Deployment represents a pioneering approach to credit risk assessment. By traversing this multifaceted journey, we equip stakeholders with the means to anticipate credit defaults and make informed decisions. As the financial landscape continues to evolve, our project stands as a beacon of innovation, guiding the industry towards heightened security, resilience, and prosperity.
+
+
+
+# Project Structure and Workflow
+
+## File Structure
+
+- **data_integration.py**: Module for data ingestion tasks.
+- **data_transformation.py**: Module for data transformation tasks.
+- **model_trainer.py**: Module for model training tasks.
+- **Prediction_pipeline.py**: Module for making predictions using a trained model.
+- **utils.py**: Utility module containing helper functions for loading objects and logging.
+- **logger.py**: Module for logging purposes.
+- **exception.py**: Module containing custom exception classes.
+- **app.py**: Flask application for deploying the prediction model as a web service.
+
+## Workflow
+
+1. **Data Ingestion**:
+   - The `data_integration.py` module handles data ingestion tasks, importing raw data and saving it to artifacts folder.
+   - Raw data is imported from the specified file path and saved as raw_data.csv.
+
+2. **Data Transformation**:
+   - The `data_transformation.py` module preprocesses and transforms the raw data for model training.
+   - It performs tasks such as handling missing values, encoding categorical features, and scaling numerical features.
+   - Preprocessed data is saved as train_data.csv and test_data.csv in the artifacts folder.
+
+3. **Model Training**:
+   - The `model_trainer.py` module trains machine learning models using preprocessed data.
+   - It loads the preprocessed data, trains multiple models, evaluates their performance, selects the best model, and saves it for future use.
+   - The trained model is saved as model.pkl in the artifacts folder.
+
+4. **Prediction**:
+   - The `Prediction_pipeline.py` module makes predictions on new data using the trained model.
+   - It loads the preprocessor, output encoder, and trained model, preprocesses input features, and makes predictions.
+   - Predictions are returned as output.
+
+5. **Deployment**:
+   - The `app.py` file contains a Flask application for deploying the prediction model as a web service.
+   - It provides endpoints for users to interact with the model, including a homepage, prediction form, and result page.
+
+## Dependencies
+
+- pandas
+- numpy
+- scikit-learn
+- Flask
+
+## Usage
+
+1. **Data Ingestion**:
+   - Modify the file path in `data_integration.py` to point to your raw data file.
+   - Run `data_integration.py` to ingest and save the raw data.
+
+2. **Data Transformation**:
+   - Run `data_transformation.py` after data ingestion to preprocess and transform the data.
+   - Ensure the data paths are correctly set in `data_transformation.py`.
+
+3. **Model Training**:
+   - Run `model_trainer.py` after data transformation to train machine learning models.
+   - Adjust the model parameters and evaluation metrics as needed in `model_trainer.py`.
+
+4. **Prediction**:
+   - Use the `Prediction_pipeline.py` module to make predictions on new data.
+   - Ensure the input features are correctly formatted and provide them to the `predict` function.
+
+5. **Deployment**:
+   - Run `app.py` to start the Flask application.
+   - Access the web service at http://localhost:8080/ to interact with the prediction model.
+
+
