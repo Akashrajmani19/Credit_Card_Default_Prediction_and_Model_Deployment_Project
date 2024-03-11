@@ -127,9 +127,11 @@ In a world where financial stability is paramount, the fusion of Exploratory Dat
    - Use the `Prediction_pipeline.py` module to make predictions on new data.
    - Ensure the input features are correctly formatted and provide them to the `predict` function.
 
-5. **Deployment**:
-   - Run `app.py` to start the Flask application.
-   - Access the web service at http://localhost:8080/ to interact with the prediction model.
+5. ### Deployment
+
+- **Access the Web Service**:
+  - The application is now deployed on AWS App Runner.
+  - Access the web service at [https://brgsx5pp2z.ap-south-1.awsapprunner.com/](https://brgsx5pp2z.ap-south-1.awsapprunner.com/) to interact with the prediction model.
 
 
 # Project Documentation
