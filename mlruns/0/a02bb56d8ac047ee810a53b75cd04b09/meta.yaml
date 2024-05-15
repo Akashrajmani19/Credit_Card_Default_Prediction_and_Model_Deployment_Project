@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Machine_learning_projects/mlruns/0/a02bb56d8ac047ee810a53b75cd04b09/artifacts
+end_time: 1715768675504
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a02bb56d8ac047ee810a53b75cd04b09
+run_name: chill-pig-273
+run_uuid: a02bb56d8ac047ee810a53b75cd04b09
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715768671955
+status: 3
+tags: []
+user_id: aakas

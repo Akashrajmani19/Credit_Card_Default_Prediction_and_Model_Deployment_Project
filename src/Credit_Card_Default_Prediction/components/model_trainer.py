@@ -12,6 +12,7 @@ from src.Credit_Card_Default_Prediction.utils.utils import evaluate_model
 
 from xgboost import XGBClassifier
 from sklearn.ensemble import RandomForestClassifier
+import mlflow
 
 @dataclass 
 class ModelTrainerConfig:
