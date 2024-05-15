@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Machine_learning_projects/mlruns/0/4be50dfe8bef47559804518b29eb48e3/artifacts
+end_time: 1715769790068
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4be50dfe8bef47559804518b29eb48e3
+run_name: trusting-bug-869
+run_uuid: 4be50dfe8bef47559804518b29eb48e3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715769788616
+status: 4
+tags: []
+user_id: aakas

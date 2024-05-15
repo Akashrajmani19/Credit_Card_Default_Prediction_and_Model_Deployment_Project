@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Machine_learning_projects/mlruns/0/50766d11ae4a4d06b9aed305fbb0f8ed/artifacts
+end_time: 1715769674337
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 50766d11ae4a4d06b9aed305fbb0f8ed
+run_name: orderly-dog-655
+run_uuid: 50766d11ae4a4d06b9aed305fbb0f8ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715769672870
+status: 4
+tags: []
+user_id: aakas

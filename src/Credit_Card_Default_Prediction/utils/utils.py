@@ -6,7 +6,7 @@ import pandas as pd
 import mlflow
 from src.Credit_Card_Default_Prediction.logger import logging
 from src.Credit_Card_Default_Prediction.exception import CustomException
-
+import mlflow.sklearn
 from sklearn.metrics import f1_score,recall_score, precision_score
 
 def save_object(file_path, obj):
@@ -24,12 +24,16 @@ def save_object(file_path, obj):
 def evaluate_model(X_train,y_train,X_test,y_test,models):
     try:
         report = {}
+        mlflow.set_registry_uri("https://dagshub.com/Akashrajmani19/Credit_Card_Default_Prediction_and_Model_Deployment_Project.mlflow")
+        tracking_url_type_store = urlparse(mlflow.get_registry_uri()).scheme
+        print(tracking_url_type_store) 
         with mlflow.start_run():
             for i in range(len(models)):
                 model = list(models.values())[i]
                 model.fit(X_train,y_train)
                 model_name = model.__class__.__name__
-                mlflow.set_tag(f"Model_{i}_name", model_name)
+                # mlflow.log_model(f"Model_{i}_name", model_name)
+                mlflow.sklearn.log_model(model, model_name)
                 # Train model
                 model.fit(X_train,y_train)
 
